@@ -1,1 +1,1 @@
-APKINFO
+APKINFO# cordova-plugin-apkInfo
