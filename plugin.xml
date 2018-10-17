@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		xmlns:rim="http://www.blackberry.com/ns/widgets"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		id="cordova-plugin-apkInfo"
+		version="5.3.0">
+	<name>ApkInfo</name>
+	<description>A cordova plugin, a JS version of ApkInfo SDK</description>
+	<license>MIT</license>
+	<keywords>cordova,apk,info</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=3.5.0" />
+	</engines>
+
+	<js-module src="www/apkInfo.js" name="apkInfo">
+		<clobbers target="apkInfo" />
+	</js-module>
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="ApkInfo">
+				<param name="android-package" value="com.cloudtopo.apkInfo.ApkInfo" />
+			</feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.INTERNET"/>
+		</config-file>
+		<source-file src="src/android/ApkInfo.java" target-dir="src/com/cloudtopo/apkInfo" />
+	</platform>
+</plugin>
