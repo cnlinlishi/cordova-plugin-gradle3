@@ -1,1 +1,1 @@
-APKINFO# cordova-plugin-apkInfo
+APKINFO# cordova-plugin-gradle3
